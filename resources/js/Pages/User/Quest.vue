@@ -5,17 +5,17 @@ import { Head } from '@inertiajs/inertia-vue3';
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Quest" />
 
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Quest
             </h2>
         </template>
 
         <MainPanel>
-            Dashboard
+            Quest
         </MainPanel>
     </AuthenticatedLayout>
 </template>
