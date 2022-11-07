@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QuestController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,9 +27,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/user/quest', function () {
-    return Inertia::render('User/Quest');
-})->middleware(['auth', 'verified'])->name('user-quest');
+Route::get('/user/quests', [QuestController::class, 'userQuest'])->middleware(['auth', 'verified'])->name('user-quest');
 
 
 require __DIR__ . '/auth.php';
